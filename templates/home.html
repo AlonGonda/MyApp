@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron text-center">
+    <h1>TinyURL Generator</h1>  
+    {% from "includes/_formhelpers.html" import render_field %}
+    <form method="POST" action="">
+        <div class="form-group">
+            {{render_field(form.enter_url, class = "form-control")}}
+        </div>
+        <p><input type="submit" class="btn btn-primary" value="Click For TinyURL!"</p>
+    </form>
+</div>
+{% endblock %}
